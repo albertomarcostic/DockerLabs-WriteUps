@@ -1,7 +1,7 @@
 # Máquina Upload
 
 ## Reconocimiento
-Comenzamos realizando un escaneo general con **nmap** sobre la IP de la máquina víctima para ver que puertos tiene abiertos.
+Comenzamos realizando un escaneo general con **nmap** sobre la IP de la máquina víctima para ver qué puertos tiene abiertos.
 Este escaneo realiza un escaneo de todos los puertos disponibles en el host "172.17.0.2", mostrando solo los
 puertos abiertos, utilizando el escaneo de tipo TCP SYN ("-sT"), estableciendo una velocidad mínima de envío de paquetes de 5000 por segundo ("--min-rate 5000"), activando el modo de verbosidad extremadamente alto ("- vvv"), desactivando la resolución DNS ("-n"), no realizando el ping previo al escaneo ("-Pn"), y guardando los resultados en formato Greppable en un archivo llamado "allPorts" ("-oG allPorts").
 
@@ -14,7 +14,7 @@ PORT    STATE SERVICE REASON
 ```
 Vemos que tan solo tiene el **puerto 80 abierto**, es decir, el servicio http, donde estará corriendo una página web que inspeccionaremos en unos instantes.
 Lanzamos un conjunto de scripts con el parámetro "-sCV" ("-sC" y "-sV" combinados) para que nos reporte más información.
-El comando utilizando el script de versión y detección de servicio, enfocándose únicamente en el puerto 80 ("-p80") del host "172.17.0.2", y guarda los resultados en un archivo de texto plano llamado "targeted" ("-oN targeted").
+El comando utiliza el script de versión y detección de servicio, enfocándose únicamente en el puerto 80 ("-p80") del host "172.17.0.2", y guarda los resultados en un archivo de texto plano llamado "targeted" ("-oN targeted").
 
 ```shell
 nmap -sCV -p80 172.17.0.2 -oN targeted
