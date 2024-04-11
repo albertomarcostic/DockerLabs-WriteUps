@@ -3,7 +3,7 @@
 ## Reconocimiento
 Comenzamos realizando un escaneo general con **nmap** sobre la IP de la máquina víctima para ver qué puertos tiene abiertos.
 Este escaneo realiza un escaneo de todos los puertos disponibles en el host "172.17.0.2", mostrando solo los
-puertos abiertos, utilizando el escaneo de tipo TCP SYN ("-sT"), estableciendo una velocidad mínima de envío de paquetes de 5000 por segundo ("--min-rate 5000"), activando el modo de verbosidad extremadamente alto ("- vvv"), desactivando la resolución DNS ("-n"), no realizando el ping previo al escaneo ("-Pn"), y guardando los resultados en formato Greppable en un archivo llamado "allPorts" ("-oG allPorts").
+puertos abiertos, utilizando el escaneo de tipo TCP SYN ("-sT"), estableciendo una velocidad mínima de envío de paquetes de 5000 por segundo ("--min-rate 5000"), activando el modo de verbosidad extremadamente alto ("-vvv"), desactivando la resolución DNS ("-n"), no realizando el ping previo al escaneo ("-Pn"), y guardando los resultados en formato Greppable en un archivo llamado "allPorts" ("-oG allPorts").
 
 ```shell
 nmap -p- --open -sT --min-rate 5000 -vvv -n -Pn 172.17.0.2 -oG allPorts
@@ -32,7 +32,7 @@ Vemos el título, la versión de Apache, y poca información más. Accedemos a l
 
 ![image](https://github.com/albertomarcostic/DockerLabs-WriteUps/assets/131155486/c4132f21-6c6e-4cd9-ac27-ea530c72a24a)
 
-Encontramos un campo de **subida de archivos**. Esto, sumando al nombre de la máquina, nos deja claro que tendremos que abusar de una subida de archivos para intentar ganar acceso a la máquina.
+Encontramos un campo de **subida de archivos**. Esto, sumado al nombre de la máquina, nos deja claro que tendremos que abusar de una subida de archivos para intentar ganar acceso a la máquina.
 Probamos a subir un archivo txt de prueba:
 
 ![image](https://github.com/albertomarcostic/DockerLabs-WriteUps/assets/131155486/73401c36-dd46-4904-91ea-9f9786574e75)
@@ -97,7 +97,7 @@ En este caso, al acceder a la URL http://172.17.0.2/uploads/cmd.php?cmd=id, esta
 El código PHP en el archivo cmd.php  ejecuta el comando del sistema que se pasa como valor de cmd. Por lo tanto, al pasar como valor de cmd, el servidor ejecuta el comando id, que muestra la identificación del
 usuario y los grupos a los que pertenece en el sistema operativo.
 
-El siguiente paso, una vez hemos comprobado que tenemos ejecución remota de comandos sobre la máquina, ejecutamos un comando que nos envíe una consola interactiva a nuestra máquina atacante. A esto se le conoce como **Reverse Shell**.
+El siguiente paso, una vez hemos comprobado que tenemos ejecución remota de comandos sobre la máquina, es ejecutar un comando que nos envíe una consola interactiva a nuestra máquina atacante. A esto se le conoce como **Reverse Shell**.
 Para ello, nos ponemos en escucha previamente en nuestra máquina atacante, por ejemplo con **netcat**:
 
 ```shell
