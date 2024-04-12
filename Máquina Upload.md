@@ -94,7 +94,7 @@ http://172.17.0.2/uploads/cmd.php?cmd=id
 
 En este caso, al acceder a la URL http://172.17.0.2/uploads/cmd.php?cmd=id, estamos utilizando el método GET para enviar un parámetro llamado cmd con el valor id.
 
-El código PHP en el archivo cmd.php  ejecuta el comando del sistema que se pasa como valor de cmd. Por lo tanto, al pasar como valor de cmd, el servidor ejecuta el comando id, que muestra la identificación del
+El código PHP en el archivo cmd.php  ejecuta el comando del sistema que se pasa como valor de cmd. Por lo tanto, el servidor ejecuta el comando id, que muestra la identificación del
 usuario y los grupos a los que pertenece en el sistema operativo.
 
 El siguiente paso, una vez hemos comprobado que tenemos ejecución remota de comandos sobre la máquina, es ejecutar un comando que nos envíe una consola interactiva a nuestra máquina atacante. A esto se le conoce como **Reverse Shell**.
@@ -147,7 +147,7 @@ sudo -l
 
 En este caso observamos que podemos ejecutar el binario "**/usr/bin/env**" como el usuario **root**, sin proporcionar contraseña.
 
-Si no sabemos como explotarlo, podemos recurrir a **[GTFOBins]**(https://gtfobins.github.io/) , y si es crítico esta página nos indicará como podemos explotarlo. En este caso es sencillo ya que con env podemos lanzarnos directamente una consola, y al poder ejecutarlo como root, esta consola será lanzada con sus permisos, de forma que hemos logrado el nivel de privilegios máximo sobre la máquina !
+Si no sabemos como explotarlo, podemos recurrir a [GTFOBins](https://gtfobins.github.io/) , y si es crítico esta página nos indicará como podemos explotarlo. En este caso es sencillo ya que con env podemos lanzarnos directamente una consola, y al poder ejecutarlo como root, esta consola será lanzada con sus permisos, de forma que hemos logrado el nivel de privilegios máximo sobre la máquina !
 
 ```shell
 sudo env /bin/sh
