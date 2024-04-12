@@ -1,5 +1,9 @@
 # Máquina Upload
 
+Dificultad -> Easy
+
+Enlace a la máquina -> [Dockerlabs](https://dockerlabs.es/)
+
 ## Reconocimiento
 Comenzamos realizando un escaneo general con **nmap** sobre la IP de la máquina víctima para ver qué puertos tiene abiertos.
 Este escaneo realiza un escaneo de todos los puertos disponibles en el host "172.17.0.2", mostrando solo los
