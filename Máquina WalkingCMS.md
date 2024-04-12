@@ -1,6 +1,6 @@
 # Máquina WalkingCMS
 
-Dificultad: Easy
+Dificultad -> Easy
 
 Enlace a la máquina -> [Dockerlabs](https://dockerlabs.es/)
 
