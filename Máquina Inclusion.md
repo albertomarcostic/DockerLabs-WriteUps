@@ -54,7 +54,7 @@ Encontramos un directorio **/shop**, accedemos, y nos encontramos con una pista.
 
 ![Pasted image 20240415001358](https://github.com/albertomarcostic/DockerLabs-WriteUps/assets/131155486/24b5bc57-55da-4e87-a4cd-21e6cc1859ba)
 
-_**"Error de Sistema: ($_GET['archivo']"); **_
+_**"Error de Sistema: ($_GET['archivo']");**_
 
 Esto nos dice que se está usando un parámetro llamado **archivo** en la url para pasarle un valor e incluir un archivo en la web. Esto puede ser vulnerable ante un **LFI** (Local File Inclusion)
 
