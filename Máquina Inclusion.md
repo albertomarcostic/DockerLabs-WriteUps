@@ -58,6 +58,9 @@ _**"Error de Sistema: ($_GET['archivo']");**_
 
 Esto nos dice que se está usando un parámetro llamado **archivo** en la url para pasarle un valor e incluir un archivo en la web. Esto puede ser vulnerable ante un **LFI** (Local File Inclusion)
 
+-----------------------
+## Explotación
+
 Tras varias pruebas, conseguimos leer archivos de la máquina mediante un **Path traversal**
 
 ```
