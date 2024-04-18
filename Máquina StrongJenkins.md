@@ -1,6 +1,5 @@
 # Máquina StrongJenkins
 
----------------------
 
 Dificultad -> Medium
 
