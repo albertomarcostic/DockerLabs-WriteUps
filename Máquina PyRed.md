@@ -1,6 +1,5 @@
 # Máquina PyRed
 
----------------------
 
 Dificultad -> Medium
 
