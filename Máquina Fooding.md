@@ -1,6 +1,5 @@
 # Máquina Fooding
 
----------------------
 
 Dificultad -> Easy
 
