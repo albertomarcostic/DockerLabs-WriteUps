@@ -1,7 +1,7 @@
 # Máquina Fooding
 
 
-Dificultad -> Easy
+Dificultad -> Medium
 
 Enlace a la máquina -> [Dockerlabs](https://dockerlabs.es/)
 
