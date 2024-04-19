@@ -1,6 +1,5 @@
 # Máquina -Pn
 
----------------------
 
 Dificultad -> Easy
 
