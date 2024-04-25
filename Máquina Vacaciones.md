@@ -1,8 +1,10 @@
-# Máquina Vacaciiones
+# Máquina Vacaciones
 
 Dificultad -> Muy fácil
 
 Enlace a la máquina -> [Dockerlabs](https://dockerlabs.es/)
+
+Creador -> @romabri
 
 ## Reconocimiento
 
