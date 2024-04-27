@@ -4,6 +4,8 @@ Dificultad -> Medium
 
 Enlace a la máquina -> [Dockerlabs](https://dockerlabs.es/)
 
+Creador -> [danielprz](https://rubelperez.github.io/)
+
 ## Reconocimiento
 
 Comenzamos realizando un escaneo general con **nmap** sobre la IP de la máquina víctima para ver que puertos tiene abiertos.
