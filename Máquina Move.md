@@ -81,7 +81,7 @@ Inspeccionamos la web del puerto 80, y encontramos la página por defecto de Apa
 Aplicamos **Fuzzing** sobre ella:
 
 ```shell
-
+gobuster dir -u http://172.17.0.2/ -w /usr/share/SecLists/Discovery/Web-Content/directory-list-2.3-medium.txt -t 20 -x txt,php,html
 ```
 
 Accedemos al archivo **maintenance.html** que hemos encontrado:
