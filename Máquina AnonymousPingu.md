@@ -45,7 +45,7 @@ Vemos mucha información por parte del servicio ftp, donde está habilitado el u
 Observamos que toda la info que nos reporta en el servicio **ftp** son los archivos fuente de la **web** que corre por el puerto 80.
 Además, comprobamos que el directorio **/upload** dentro de la web, tiene capacidad de **directory list**, de forma que será fácil la intrusión.
 Podremos subir una **reverse shell** y acceder a ella desde la web para ganar acceso.
-En mi caso la subiré al directorio **/upload**, pero quizás no sea necesario que sea subida ahí.
+La subimos al directorio **/upload**, que es el único lugar donde tenemos permisos de escritura.
 
 Subiré la reverse shell típica de **PentestMonkey** -> [Reverse Shell](https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php)
 
