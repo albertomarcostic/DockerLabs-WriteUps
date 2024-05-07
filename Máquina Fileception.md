@@ -22,7 +22,7 @@ PORT   STATE SERVICE REASON
 Lanzamos un conjunto de scripts predeterminado con **nmap** para que nos reporte más información relacionada a los puertos descubiertos en el anterior escaneo.
 
 ```shell
-nmap -sCV -p 172.17.0.2 -oN targeted
+nmap -sCV -p21,22,80 172.17.0.2 -oN targeted
 ________________________________________________
 PORT   STATE SERVICE VERSION
 21/tcp open  ftp     vsftpd 3.0.5
