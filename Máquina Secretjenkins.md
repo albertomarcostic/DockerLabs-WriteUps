@@ -19,7 +19,7 @@ PORT     STATE SERVICE    REASON
 Lanzamos un conjunto de scripts predeterminado con **nmap** para que nos reporte más información relacionada a los puertos descubiertos en el anterior escaneo.
 
 ```shell
-nmap -sCV -p 172.17.0.2 -oN targeted
+nmap -sCV -p22,8080 172.17.0.2 -oN targeted
 ________________________________________________
 PORT     STATE SERVICE    REASON
 22/tcp   open   ssh     OpenSSH 9.2p1 Debian 2+deb12u2 (protocol 2.0)
